@@ -12,14 +12,15 @@ namespace TomatoTimer
 {
     public partial class TestForms : Form
     {
+        int Num = 0;
         List<MyInterval> TimeInter;
-        myStopWotch Woch;
+        //myStopWotch Woch;
         MyTomatoTim TomTim;
         public TestForms()
         {
             InitializeComponent();
             TimeInter = null;
-            Woch = new myStopWotch();
+            //Woch = new myStopWotch();
             TomTim = null;
             
 
@@ -43,12 +44,13 @@ namespace TomatoTimer
             if (textBox1.Text.Length == 0) { btnAdd.Enabled = false; }
             else btnAdd.Enabled = true;
         }
+        void SetMinute(int num) { Num = num; }
         private void btn_Create_Click(object sender, EventArgs e)
         {
             btn_Create.Enabled = false;
             TomTim = new MyTomatoTim(TimeInter);
-            Woch.getTime = TomTim.newTimeIntervalActiv;
-            TomTim.getMyMinute = Woch.StartInterval;
+            //Woch.getTime = TomTim.newTimeIntervalActiv;
+            TomTim.getMyMinute = SetMinute;
             TomTim.getMyNamInterval = textLabl1;
             TomTim.MyTimeNow = textLabl2;
             TomTim.EndTimer = ShowMyMess;
@@ -62,10 +64,18 @@ namespace TomatoTimer
             groupBox2.Enabled = true;
             groupBox1.Enabled = false;
         }
-
+       
         private void btnStart_Click(object sender, EventArgs e)
         {
             TomTim.StartTimer();
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Num--;
+            TomTim.newTimeIntervalActiv(Num);
+            if (Num == 0) { timer1.Enabled = false; }
         }
     }
 }

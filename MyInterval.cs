@@ -55,6 +55,7 @@ namespace TomatoTimer
                     {
                         getMyNamInterval?.Invoke(timerIntervalList[numActivInter].NameInter);
                         MyTimeNow?.Invoke(timerIntervalList[numActivInter].MinuteInter+" : 00");
+                        getMyMinute?.Invoke(timerIntervalList[numActivInter].MinuteInter);
                     }
                 
 
@@ -69,7 +70,7 @@ namespace TomatoTimer
     }
     public class myStopWotch 
     {
-        public delegate void getNewTime(int min);//передает шзменение времени
+        public delegate void getNewTime(int min);//передает изменение времени
         public getNewTime getTime;
         bool flagStart;
         Stopwatch myWotch;
