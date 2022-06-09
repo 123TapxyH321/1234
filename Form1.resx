@@ -221,7 +221,7 @@
     <value>2</value>
   </data>
   <data name="bPause.Text" xml:space="preserve">
-    <value>Пауза</value>
+    <value>СтартТеста</value>
   </data>
   <data name="&gt;&gt;bPause.Name" xml:space="preserve">
     <value>bPause</value>
@@ -275,7 +275,7 @@
     <value>50, 163</value>
   </data>
   <data name="tBRound.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 15</value>
+    <value>34, 19</value>
   </data>
   <data name="tBRound.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -308,7 +308,7 @@
     <value>9, 163</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 15</value>
+    <value>55, 18</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>

@@ -16,5 +16,11 @@ namespace TomatoTimer
         {
             InitializeComponent();
         }
+
+        private void bPause_Click(object sender, EventArgs e)
+        {
+            TestForms Test = new TestForms();
+            Test.ShowDialog();
+        }
     }
 }

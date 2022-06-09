@@ -10,6 +10,7 @@ namespace TomatoTimer
     //абстр класс интервал 
     public abstract class In_Interval
     {
+       
     }
     //абстр класс для таймера
     public abstract class In_TomatoTamer

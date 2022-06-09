@@ -59,6 +59,7 @@ namespace TomatoTimer
             this.bPause.ForeColor = System.Drawing.SystemColors.Window;
             this.bPause.Name = "bPause";
             this.bPause.UseVisualStyleBackColor = true;
+            this.bPause.Click += new System.EventHandler(this.bPause_Click);
             // 
             // textBox1
             // 
